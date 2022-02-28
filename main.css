@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@media (max-width:768px) {
+    .navbar-menu .menu-item .menu-icon{
+        display: none!important;
+    }
+    .navbar-menu .menu-item .menu-title a{
+        padding:0!important;
+    }
+
+  
+}
+.menu-title{@apply transition}
+.navbar-menu .menu-item{
+    display: flex!important;
+    align-items: center;
+}
+:root{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+@keyframes logo-anim {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+.navbar-logo .logo-img {
+    transform-origin: center;
+    /* animation:logo-anim 1s infinite forwards cubic-bezier(0.31, 0.31, 1, 1); */
+
+}
+.navbar-menu .menu-item .menu-icon{
+width: 20px;
+height: 20px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+
+.navbar-scheduled .menu-item .menu-icon{
+    opacity: .5;
+    display: inline-flex;
+    background-color:rgba(0,0,0,.1) ;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+}
+.navbar-scheduled .menu-item .menu-icon::after{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border:2px solid rgb(0,0,0);
+}
+
+.back .box-item{
+    @apply p-4 py-6 opacity-80 bg-opacity-10 rounded-xl cursor-pointer max-w-[150px] m-auto  font-bold transition-all;
+}
+.back .box-item:hover{
+    @apply opacity-100 bg-opacity-75;
+}
+.back .box-item .item-img{
+    @apply h-[20px] mb-8 text-3xl
+}
+.push{
+    @apply my-4
+}
+.push .push-item{
+    @apply  relative overflow-hidden flex border rounded-lg bg-indigo-800 shadow-lg
+}
+.push .push-item .edit{
+    @apply      w-0 transition-all duration-700 inline-flex gap-4 text-2xl text-white items-center  bg-inherit ;
+    
+}
+.push .push-item .content{
+    @apply bg-white w-full   grow py-2 px-4 items-center flex gap-4;
+}
+
+
+.push .push-item .item-img{
+    @apply rounded-full overflow-hidden w-14 h-14
+}
+.push .push-item .item-img img{
+    @apply w-full h-full
+}
+.push .push-item .item-content h4{
+    @apply font-bold
+}
+.push-item:hover .edit{
+    width: 100px;
+    padding: 1rem;
+}
+.navbar-scheduled .menu-item label{
+    @apply flex items-center lg:gap-2
+}
+.navbar-scheduled .menu-item .outer-circle{
+    @apply w-8 h-8 shrink-0 hidden sm:inline-flex transition-all duration-150  bg-opacity-20 rounded-full overflow-hidden  items-center justify-center;
+}
+.navbar-scheduled ul .menu-item input[type="checkbox"]{
+   display: none;
+} 
+.navbar-scheduled .menu-item .checkbox:checked + label .outer-circle{
+    @apply bg-opacity-40
+}
+.navbar-scheduled .menu-item  label .outer-circle::after{
+    content: '';
+    @apply w-5 h-5  border-2 rounded-full delay-150 transition-all;
+    border-color: transparent;
+    
+    
+}
+.navbar-scheduled .menu-item .checkbox:checked + label .outer-circle::after{
+
+    border-color: initial;
+    
+    
+}
+.navbar-scheduled .menu-item .checkbox:checked + label .menu-title a{
+    cursor: default;
+    color: gray !important;
+    text-decoration: line-through;
+    
+    
+}
+.navbar-scheduled .menu-item .menu-title:hover{
+    @apply text-indigo-800
+}
+.user-info a{
+    @apply w-10 h-10 flex items-center justify-center
+}
+
+.percent .percent-day{
+    @apply text-gray-500 font-bold mt-4
+}
+.percent .card{
+@apply flex justify-between items-center my-1 p-2 transition-all
+}
+.percent .card:hover{
+    @apply bg-gray-200
+}
+.percent .card-left{
+    @apply flex items-center gap-3 grow
+}
+.percent .card-left  .card-logo{
+    @apply w-10 h-10 shrink-0 rounded-xl text-white flex items-center justify-center;
+}
+.percent .card-left .card-title{
+    @apply font-bold
+}
+.percent .card-left .card-subtitle{
+    @apply text-gray-500 text-[.8rem]
+}
+.percent .card-right{
+    @apply text-indigo-800 font-bold;
+}
+form .form-control div span{
+  transition:all 500ms, border-radius 1000ms  step-start;
+}
+.search-box:focus+div span{
+    width: 100%!important;
+    border-radius: .75rem;
+}

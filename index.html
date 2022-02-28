@@ -1,0 +1,269 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="flex h-screen max-h-screen overflow-hidden">
+     <div class="w-[20%] border-r  pl-6 pt-8 ">
+        <div class="flex flex-col h-full max-h-[500px] justify-between">
+          <div class="navbar-logo">
+            <div class="logo-img w-10 mr-2 inline-block align-middle">
+              <img src="src/img/logo.png" alt="logo" class="text-inherit"/>
+            </div>
+            <h4 class="hidden lg:inline">Olith Banking</h4>
+          </div>
+          <div class="navbar-menu">
+            <h4 class="text-indigo-900 font-bold mb-3">Menu</h4>
+            <ul class="text-gray-500 flex flex-col gap-4 items-start">
+              <li class="menu-item hover:text-indigo-900 inline-block">
+                <span class="menu-icon mr-2 text-lg "><i class="fas fa-house-user"></i></span>
+                <span class="menu-title"><a href="#">Home</a></span>
+              </li>
+              <li class="menu-item hover:text-indigo-900 inline-block">
+                <span class="menu-icon mr-2 text-lg "><i class="fa-brands fa-app-store"></i></span>
+                <span class="menu-title"><a href="#">Accounts</a></span>
+              </li>
+              <li class="menu-item hover:text-indigo-900 inline-block">
+                <span class="menu-icon mr-2 text-lg "><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                <span class="menu-title"><a href="#" >Cards</a></span>
+              </li>
+              <li class="menu-item hover:text-indigo-900 inline-block">
+                <span class="menu-icon mr-2 text-lg "><i class="fa-solid fa-users"></i></span>
+                <span class="menu-title"><a href="#">Contacts</a></span>
+              </li>
+              <li class="menu-item hover:text-indigo-900 inline-block">
+                <span class="menu-icon mr-2 text-lg "><i class="fa fa-calculator" aria-hidden="true"></i></span>
+                <span class="menu-title"><a href="#">Loan Calculator</a></span>
+              </li>
+              <li class="menu-item hover:text-indigo-900 inline-block">
+                <span class="menu-icon mr-2 text-lg "><i class="fa fa-cog" aria-hidden="true"></i></span>
+                <span class="menu-title"><a href="#" >Settings</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-scheduled">
+              <h4 class="text-indigo-900 font-bold mb-3">Scheduled Payments</h4>
+              <ul class="text-gray-500 flex flex-col gap-4 items-start">
+                  <li class="menu-item">
+                    <input type="checkbox" id="monthly" class="checkbox" checked>
+                    <label for="monthly">
+                      <span class="outer-circle text-black bg-gray-900"></span>
+                      <span class="menu-title"><a href="#">Monthly Rent</a></span>
+                    </label>
+                  </li>
+                  <li class="menu-item">
+                    <input type="checkbox" id="food" class="checkbox">
+                    <label for="food">
+                      <span class="outer-circle text-red-900 bg-red-900"></span>
+                      <span class="menu-title"><a href="#">Food Payment</a></span>
+                    </label>
+                  </li> 
+                  <li class="menu-item">
+                    <input type="checkbox" id="utillity" class="checkbox">
+                    <label for="utillity">
+                      <span class="outer-circle text-blue-900 bg-blue-900"></span>
+                      <span class="menu-title"><a href="#">Utillity bills</a></span>
+                    </label>
+                  </li>
+                
+                </ul>
+          </div>
+        </div>
+      </div>
+      <div class="grow pt-5 px-16 h-full overflow-auto ">
+          <form>
+              <div class="form-control relative w-full rounded-xl border p-4 py-3">
+                  <input type="text" class="search-box w-full  outline-none text-lg pl-8">
+                  <div class="absolute w-full  left-0 bottom-0 right-0 top-0 flex justify-center pointer-events-none"><span class="border-b-2 duration-500 transition-all rounded-none  border-indigo-800 inline-block w-[0px] "></span></div>
+                  <button type="submit"><i class="fa fa-search absolute left-0 top-[50%] translate-y-[-50%] p-4 text-xl" aria-hidden="true"></i></button>
+              </div>
+          </form>
+          <section class="back">
+              <h4 class="text-indigo-900 text-xl my-4 font-bold">Welcome back AR Sharkir</h4>
+              <div class="back-box grid grid-cols-1  sm:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4">
+                <div class="box-item text-green-800 bg-green-500">
+                  <div class="item-img"><i class="fas fa-credit-card"></i></div>
+                  <div class="item-description">Transfer via card number</div>
+                </div>
+                <div class="box-item text-indigo-800 bg-indigo-500">
+                  <div class="item-img"><i class="fas fa-chart-pie"></i></div>
+                  <div class="item-description">Transfer to another bank</div>
+                </div>
+                <div class="box-item text-orange-800 bg-orange-500">
+                  <div class="item-img"><i class="fa fa-users" aria-hidden="true"></i></div>
+                  <div class="item-description">Transfer to the same bank</div>
+                </div>
+                <div class="box-item text-sky-800 bg-sky-500">
+                  <div class="item-img"><i class="fa fa-bank"></i></div>
+                  <div class="item-description">transfer to another bank</div>
+                </div>
+              </div>
+
+          </section>
+          <section class="chart w-full h-[200px] my-2">
+            <img src="src/img/chart.jpg" alt="chart-img" class="mx-auto w-full h-full object-contain">
+          </section>
+          <section class="push">
+            <div class="flex flex-col gap-4">
+              <div class="push-item">
+                
+                <div class="content">
+                  <div class="item-img"><img src="src/img/usr-1.jpg" alt="user-img"></div>
+                  <div class="item-content">
+                    <h4>Push</h4>
+                    <p>12788980890</p>
+                  </div>
+
+                
+                </div>
+                <div class="edit">
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-trash-can"></i></a>
+                </div>
+              </div>
+              <div class="push-item">
+                
+                <div class="content">
+                  <div class="item-img"><img src="src/img/usr-2.jpg" alt="user-img"></div>
+                  <div class="item-content">
+                    <h4>Push</h4>
+                    <p>12788980890</p>
+                  </div>
+
+                
+                </div>
+                <div class="edit w-[100px!important] p-[1rem!important]">
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-trash-can"></i></a>
+                </div>
+              </div>
+              <div class="push-item">
+                
+                <div class="content">
+                  <div class="item-img"><img src="src/img/usr-3.jpg" alt="user-img"></div>
+                  <div class="item-content">
+                    <h4>Push</h4>
+                    <p>12788980890</p>
+                  </div>
+
+                
+                </div>
+                <div class="edit">
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-trash-can"></i></a>
+                </div>
+              </div>
+      
+            </div>
+          </section>
+      </div>
+
+
+
+
+      <div class="w-[30%] bg-gray-50 pt-7 p-6 ">
+        <div class="flex flex-col justify-between h-full">
+          <div class="user-info text-xl flex flex-row-reverse gap-4 items-center pr-6">
+            <a href="" class="hover:grayscale-[.7] transition-all duration-300"><div class="user-img w-10 h-10 rounded-full overflow-hidden"><img src="src/img/profile.jpg" alt=""></div></a>
+            <a href="#" class="w-10 h-10 rounded-full overflow-hidden hover:bg-gray-200">
+              <i class="fas fa-user"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full overflow-hidden hover:bg-gray-200">
+              <i class="fas fa-bell"></i>
+            </a>
+          </div>
+          <div class="visa-card relative border rounded-lg bg-[#1673ff] w-full h-[13vw] overflow-hidden shrink-0">
+            
+            <div class="absolute w-[120%] h-[30vw] bg-indigo-900 rounded-full right-[30%] "></div>
+            <div class="absolute w-[60%] h-[11vw] bg-[#4eb4ff] rounded-full right-[-30%] top-[-13%] "></div>
+            <div class="absolute top-0 left-0 right-0 bottom-0 p-2 md:p-3 lg:p-4">
+              <div class="inline-flex h-full text-white flex-col justify-between">
+              <div>
+                <h4 class="card-name font-bold text-[.8rem] sm:text-sm md:text-base lg:text-xl">John Smith</h4>
+              </div>
+              <div class="text-[.5rem] sm:text-[.6rem] md:text-[.7rem] lg:text-sm xl:text-base">
+                <p>Amazon Platinium</p>
+                <p>4756 ... ... ... 9018</p>
+                <p class="font-bold">$3.469.52</p>
+              </div>
+            </div>
+            <div class="absolute bottom-[5%] right-[5%]"><h4 class="text-[.8rem] sm:text-sm md:text-base lg:text-xl font-bold text-white ">VISA</h4></div>
+            </div>
+           
+          </div>
+          <div class="add-card opacity-70 flex border-dashed rounded p-4 justify-center border-gray-500 border-4 "><a href="#"> Add New Card</a></div>
+          <div class="percent flex-col flex text-sm">
+            <h4 class="percent-day">Today</h4>
+            <div class="card">
+              <div class="card-left">
+                <div class="card-logo bg-indigo-800 "><i class="fa-solid fa-droplet"></i></div>
+                <div class="card-content"><div class="card-title">Water Bill</div>
+              <div class="card-subtitle">unsuccessfully</div>
+              </div>
+              </div>
+              <div class="card-right">
+                <h4 class="price text-red-600">-$280</h4>
+              </div>
+            </div>
+            <h4 class="percent-day">Yesterday</h4>
+            <div class="card">
+              <div class="card-left">
+                <div class="card-logo bg-pink-600"><i class="fas fa-down-long"></i></div>
+                <div class="card-content"><div class="card-title">Income: salary Oct</div>
+              <div class="card-subtitle"></div>
+              </div>
+              </div>
+              <div class="card-right">
+                <h4 class="price ">+$12000</h4>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-left">
+                <div class="card-logo bg-sky-600"><i class="fas fa-down-left-and-up-right-to-center"></i></div>
+                <div class="card-content"><div class="card-title">Electric Bill</div>
+              <div class="card-subtitle">Successfully</div>
+              </div>
+              </div>
+              <div class="card-right">
+                <h4 class="price text-red-600 ">-$480</h4>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-left">
+                <div class="card-logo bg-yellow-400"><i class="fab fa-delicious"></i></div>
+                <div class="card-content"><div class="card-title">Income: Jane transfer</div>
+              <div class="card-subtitle"></div>
+              </div>
+              </div>
+              <div class="card-right">
+                <h4 class="price ">+$500</h4>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-left">
+                <div class="card-logo bg-green-400"><i class="fas fa-database"></i></div>
+                <div class="card-content"><div class="card-title">Internet Bill</div>
+              <div class="card-subtitle">Successfully</div>
+              </div>
+              </div>
+              <div class="card-right">
+                <h4 class="price ">-$100</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
