@@ -20,6 +20,9 @@
     font-family: sans-serif;
     font-size: 14px;
 }
+body{
+    overflow: hidden;
+}
 @keyframes logo-anim {
     0%{transform: rotate(0);}
     100%{transform: rotate(360deg);}
